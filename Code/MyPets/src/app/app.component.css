@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Kristen ITCNEW";
+    src: url("http://db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.eot");
+    src: url("http://db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.svg#Kristen ITC") format("svg");
+}
+
+h1 {
+    font-family: "Kristen ITCNEW";
+    font-size:500%;
+}
