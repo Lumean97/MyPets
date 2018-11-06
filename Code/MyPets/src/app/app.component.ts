@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyPets';
+  loginName = '';
+  password = '';
+  message = '';
+
+  login(): void{
+      this.message = "Willkommen zu MyPets " + this.loginName + "!";
+  }
 }
