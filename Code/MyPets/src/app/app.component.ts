@@ -21,7 +21,7 @@ export class AppComponent {
 
   login(): void{
       
-      this.http.post("localhost:3000/MyPets/api/login", {}).subscribe((data) => {
+      this.http.post("http://localhost:3000/MyPets/api/login", {}).subscribe((data) => {
         if(!data['error']){
           this.message = "Willkommen zu MyPets " + this.loginName + "!";
         }else{
