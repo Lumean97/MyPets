@@ -21,7 +21,7 @@ export class AppComponent {
 
   login(): void{
       
-      this.http.post("http://lumeanit.de:3000/MyPets/api/login", {}).subscribe((data) => {
+      this.http.post("http://lumeanit.de:3000/MyPets/api/login", {userName: this.loginName, password:this.password}).subscribe((data) => {
         if(!data['error']){
           this.message = "Willkommen zu MyPets " + this.loginName + "!";
         }else{
