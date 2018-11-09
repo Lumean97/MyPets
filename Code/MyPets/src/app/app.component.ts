@@ -18,15 +18,18 @@ export class AppComponent {
   loginname = '';
   password = '';
   message = '';
+  animals = '';
 
-  login(): void{
-      
-      this.http.post("http://lumeanit.de:3000/MyPets/api/login", {username: this.loginname, password:this.password}).subscribe((data) => {
-        if(!data['error']){
-          this.message = "Willkommen zu MyPets " + this.loginname + "!";
-        }else{
-          this.message = "Fehler beim Login!";
-        }
+  login(): void {
+
+    this.http.post("http://localhost:3000/MyPets/api/login", { username: this.loginname, password: this.password }).subscribe((data) => {
+      this.message = "Willkommen zu MyPets " + data['name'] + " " + data['lastname'] + "!";
+      this.animals = "Deine bisherigen Tiere: ";
+      data['pets'].forEach(animal => {
+        this.animals += '<br>' + animal.name;
       });
+    }, (err) => {
+      this.message = "Fehler beim Login!";
+    });
   }
 }
