@@ -15,20 +15,18 @@ export class AppComponent {
   constructor(private http: HttpClient) { }
 
   title = 'MyPets';
-  loginName = '';
+  loginname = '';
   password = '';
   message = '';
 
   login(): void{
       
-      this.http.post("http://lumeanit.de:3000/MyPets/api/login", {userName: this.loginName, password:this.password}).subscribe((data) => {
+      this.http.post("http://lumeanit.de:3000/MyPets/api/login", {username: this.loginname, password:this.password}).subscribe((data) => {
         if(!data['error']){
-          this.message = "Willkommen zu MyPets " + this.loginName + "!";
+          this.message = "Willkommen zu MyPets " + this.loginname + "!";
         }else{
           this.message = "Fehler beim Login!";
         }
       });
-
-
   }
 }
