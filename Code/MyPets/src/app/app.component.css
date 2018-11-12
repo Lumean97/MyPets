@@ -12,3 +12,13 @@ h1 {
     font-family: "Kristen ITCNEW";
     font-size:500%;
 }
+
+.btn  {
+    margin: 5px;
+}
+
+#navbar {
+    width:100%;
+    background-color: #a07bff;
+    text-align: right;
+}

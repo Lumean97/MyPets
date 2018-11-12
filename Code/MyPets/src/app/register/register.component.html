@@ -3,13 +3,44 @@
   <h1>
     {{message}}
   </h1>
-  <div >
-    <p>Nutzername: </p><input (keyup.enter)="register()" [(ngModel)]="username" placeholder="Username"><br>
-    <p>Passwort: </p><input type="password" (keyup.enter)="register()" [(ngModel)]="password" placeholder="Passwort"><br>
-    <p>Vorname: </p><input (keyup.enter)="register()" [(ngModel)]="name" placeholder="Vorname"><br>
-    <p>Nachname: </p><input (keyup.enter)="register()" [(ngModel)]="lastname" placeholder="Nachname"><br>
-  </div>
-
-  <button (click)="register()">Registrieren!</button>
 </div>
+<div id="passwordForm">
+      <table>
+          <tr>
+            <td>Nutzername: </td>
+            <td><input (keyup.enter)="register()" [(ngModel)]="username" placeholder="Username"></td>
+          </tr>
+      
+          <tr>
+            <td>Passwort: </td>
+            <td><input type="password" (keyup.enter)="register()" [(ngModel)]="password" placeholder="Passwort"></td>
+          </tr>
+          <tr>
+            <td>Passwort Wiederholen: </td>
+            <td><input type="password" (keyup)="checkPassword()" keyup.enter="register()" [(ngModel)]="passwordCheck"
+                placeholder="Passwort wiederholen!"></td>
+          </tr>
+          <div [hidden]="passwordCheck == 0 || checkPassword()">
+            <div style="position: fixed; color:red">
+              Die beiden Passwörter stimmen nicht
+              miteinander überein!
+            </div>
+            <br>
+          </div>
+      
+          <tr>
+            <td>Vorname: </td>
+            <td><input (keyup.enter)="register()" [(ngModel)]="name" placeholder="Vorname"></td>
+          </tr>
+          <tr>
+            <td>Nachname: </td>
+            <td><input (keyup.enter)="register()" [(ngModel)]="lastname" placeholder="Nachname"></td>
+          </tr>
+        </table>
+        <br>
+        <div style="text-align: center; width: 20%; margin: auto;">
+            <button [disabled]="!checkPassword()" class="btn-primary" (click)="register()">Registrieren!</button>
+        </div>
+        
+ </div>
 

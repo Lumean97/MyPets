@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit {
   message = '';
   username = '';
   password = '';
+  passwordCheck = '';
   name = '';
   lastname = '';
 
@@ -27,5 +28,9 @@ export class RegisterComponent implements OnInit {
     }, (err) => {
       this.message = err.error.msg;
     });
+  }
+
+  checkPassword(): boolean {
+      return this.password.length > 0 && this.password === this.passwordCheck;
   }
 }

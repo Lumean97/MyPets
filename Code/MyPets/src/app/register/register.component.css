@@ -12,3 +12,12 @@ h1 {
     font-family: "Kristen ITCNEW";
     font-size:500%;
 }
+
+#passwordForm {
+    margin: auto;
+    width: 20%;
+}
+
+table tr td { 
+    padding: 5px 20px;
+}
