@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ message }}
+  </h1>
+  <h2 [innerHTML]="animals">
+  
+  </h2>
+  <div >
+    <input (keyup.enter)="login()" [(ngModel)]="loginname" placeholder="Login">
+    <input (keyup.enter)="login()" type="password" [(ngModel)]="password" placeholder="password">
+  </div>
+
+  <button (click)="login()">Login!</button>
+</div>
+

@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{message}}
+  </h1>
+  <div >
+    <p>Nutzername: </p><input (keyup.enter)="register()" [(ngModel)]="username" placeholder="Username"><br>
+    <p>Passwort: </p><input type="password" (keyup.enter)="register()" [(ngModel)]="password" placeholder="Passwort"><br>
+    <p>Vorname: </p><input (keyup.enter)="register()" [(ngModel)]="name" placeholder="Vorname"><br>
+    <p>Nachname: </p><input (keyup.enter)="register()" [(ngModel)]="lastname" placeholder="Nachname"><br>
+  </div>
+
+  <button (click)="register()">Registrieren!</button>
+</div>
+
