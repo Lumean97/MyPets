@@ -20,7 +20,7 @@
             <td><input type="password" (keyup)="checkPassword()" keyup.enter="register()" [(ngModel)]="passwordCheck"
                 placeholder="Passwort wiederholen!"></td>
           </tr>
-          <div [hidden]="passwordCheck == 0 || checkPassword()">
+          <div [hidden]="passwordCheck.length === 0 || checkPassword()">
             <div style="position: fixed; color:red">
               Die beiden Passwörter stimmen nicht
               miteinander überein!
